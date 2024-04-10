@@ -1,7 +1,9 @@
+const helmet = require('helmet')
 const express = require('express');
 const app = express();
 
-
+// Removes the X-Powered-By header if it was set.
+app.use(helmet.hidePoweredBy());
 
 
 
