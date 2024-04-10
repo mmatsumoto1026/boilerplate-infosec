@@ -5,7 +5,9 @@ const app = express();
 // Removes the X-Powered-By header if it was set.
 app.use(helmet.hidePoweredBy());
 
-
+app.use(helmet.frameguard(
+  {action: 'deny'}
+));
 
 
 
